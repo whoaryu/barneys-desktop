@@ -14,6 +14,9 @@ import { displaySlapBet } from './components/apps/slapbet';
 import { displayQuoteGame } from './components/apps/quotegame';
 import { displayTedsHome } from './components/apps/tedshome';
 import PDFBookViewer from './components/apps/pdfbook';
+// import Flipbook from './components/apps/trial';
+// import PDFViewer from './components/apps/trial';
+import BookReader from './components/apps/trial';
 //import { PDFFlipBook } from './components/apps/pdfbook';
 
 
@@ -165,24 +168,24 @@ const apps = [
     //     screen: () => <PDFFlipBook pdfPath="./pdfs/playbook.pdf" />,
     // },
 
-    {
-        id: "playbook",
-        title: "The Playbook",
-        icon: "./images/playbook.jpg",
-        disabled: false,
-        favourite: false,
-        desktop_shortcut: true,
-        screen: () => <PDFBookViewer  pdfPath="./pdfs/playbook.pdf" title="The Playbook" />,
-    },
-    {
-        id: "brocode",
-        title: "The Bro Code",
-        icon: "./images/thebrocode.jpg",
-        disabled: false,
-        favourite: false,
-        desktop_shortcut: true,
-        screen: () => <PDFBookViewer  pdfPath="./pdfs/thebrocode.pdf" title="The Bro Code" />,
-    },
+    // {
+    //     id: "playbook",
+    //     title: "The Playbook",
+    //     icon: "./images/playbook.jpg",
+    //     disabled: false,
+    //     favourite: false,
+    //     desktop_shortcut: true,
+    //     screen: () => <PDFBookViewer  pdfPath="./pdfs/playbook.pdf" title="The Playbook" />,
+    // },
+    // {
+    //     id: "brocode",
+    //     title: "The Bro Code",
+    //     icon: "./images/thebrocode.jpg",
+    //     disabled: false,
+    //     favourite: false,
+    //     desktop_shortcut: true,
+    //     screen: () => <PDFBookViewer  pdfPath="./pdfs/thebrocode.pdf" title="The Bro Code" />,
+    // },
     {
         id: "teds-home",
         title: "Ted's Apartment 3d",
@@ -191,6 +194,25 @@ const apps = [
         favourite: false,
         desktop_shortcut: true,
         screen: displayTedsHome,
+    },
+    
+    {
+        id: "play-book",
+        title: "The Playbook",
+        icon: "./images/playbook.jpg",
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        screen: () => <BookReader fileUrl={"./pdfs/playbook.pdf"} />,
+    },
+    {
+        id: "bro-code",
+        title: "The Bro Code",
+        icon: "./images/thebrocode.jpg",
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        screen: () => <BookReader fileUrl={"./pdfs/thebrocode.pdf"}  />,
     },
     
 ]
