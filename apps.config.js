@@ -17,6 +17,7 @@ import PDFBookViewer from './components/apps/pdfbook';
 // import Flipbook from './components/apps/trial';
 // import PDFViewer from './components/apps/trial';
 import BookReader from './components/apps/trial';
+import Coffee from './components/apps/buymeacoffee';
 //import { PDFFlipBook } from './components/apps/pdfbook';
 
 
@@ -213,6 +214,15 @@ const apps = [
         favourite: false,
         desktop_shortcut: true,
         screen: () => <BookReader fileUrl={"./pdfs/thebrocode.pdf"}  />,
+    },
+    {
+        id: "sponsorme",
+        title: "Buy Me a Coffee",
+        icon: "./images/buymeacoffee.png",
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        screen: () => <Coffee />,
     },
     
 ]
