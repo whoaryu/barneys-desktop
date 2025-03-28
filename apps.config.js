@@ -3,11 +3,11 @@ import displaySpotify from './components/apps/spotify';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
-import { displayTrash } from './components/apps/trash';
+import { displayLegendaryTrash } from './components/apps/trash';
 import { displayGedit } from './components/apps/gedit';
 import { displayAboutBarney } from './components/apps/barney';
-import { displayTerminalCalc } from './components/apps/calc';
-import { displayResumeVideo, displaySuitVideo } from "./components/apps/videoplayer";
+import { displayCalculator } from './components/apps/calc';
+import { displayResumeVideo, displayRobinSparkles1, displaySuitVideo } from "./components/apps/videoplayer";
 import { displayBlogApp } from "./components/apps/blogapp";
 import { displayRobinPage, displayHotCrazyChart } from "./components/apps/imageviewer";
 import { displaySlapBet } from './components/apps/slapbet';
@@ -18,6 +18,8 @@ import PDFBookViewer from './components/apps/pdfbook';
 // import PDFViewer from './components/apps/trial';
 import BookReader from './components/apps/trial';
 import Coffee from './components/apps/buymeacoffee';
+import HIMYMRandomizer from './components/apps/episoderandom';
+import { displayIntervention } from './components/apps/intervention';
 //import { PDFFlipBook } from './components/apps/pdfbook';
 
 
@@ -38,7 +40,7 @@ const apps = [
         disabled: false,
         favourite: true,
         desktop_shortcut: false,
-        screen: displayTerminalCalc,
+        screen: displayCalculator,
     },
     {
         id: "about-barney",
@@ -84,7 +86,7 @@ const apps = [
         disabled: false,
         favourite: false,
         desktop_shortcut: true,
-        screen: displayTrash,
+        screen: displayLegendaryTrash,
     },
     {
         id: "gedit",
@@ -214,6 +216,33 @@ const apps = [
         favourite: false,
         desktop_shortcut: true,
         screen: () => <BookReader fileUrl={"./pdfs/thebrocode.pdf"}  />,
+    },
+    {
+        id: "randomizer",
+        title: "Watch Random Episode",
+        icon: "./themes/filetypes/php.png",
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        screen: () => <HIMYMRandomizer />,
+    },
+    {
+        id: "robin-sparkels",
+        title: "Robin Sparkles 1",
+        icon: "./themes/filetypes/video.png",
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        screen: displayRobinSparkles1,
+    },
+    {
+        id: "intervention",
+        title: "Intervention Banner",
+        icon: "./themes/filetypes/image.png",
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        screen: displayIntervention,
     },
     {
         id: "sponsorme",

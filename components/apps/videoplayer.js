@@ -61,3 +61,4 @@ export default VideoPlayer;
 // Functions to display specific videos
 export const displayResumeVideo = () => <VideoPlayer videoSrc="./videos/barneyresume.mp4" title="My LEGENDARY RESUME" />;
 export const displaySuitVideo = () => <VideoPlayer videoSrc="./videos/nothingsuits.mp4" title="Nothing Suits Me Like A Suit" />;
+export const displayRobinSparkles1 = () => <VideoPlayer videoSrc="./videos/letsgotothemall1.mp4" title="Let's Go To The Mall!" />;

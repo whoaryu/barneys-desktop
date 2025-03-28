@@ -8,7 +8,7 @@ const quotes = [
   { quote: "Lawyered!", character: "Marshall Eriksen" },
   { quote: "Whenever I'm sad, I stop being sad and be awesome instead.", character: "Barney Stinson" },
   { quote: "A lie is just a great story that someone ruined with the truth.", character: "Barney Stinson" },
-  { quote: "If you have chemistry, you only need one other thing. Timing.", character: "Ted Mosby" },
+  { quote: "If you have chemistry, you only need one other thing. Timing.", character: "Robin Scherbatsky" },
   { quote: "I love everything about her, and I'm not a guy who says that lightly. I'm a guy who has faked love his entire life.", character: "Barney Stinson" },
   { quote: "The Bro Code is not just a book… it's a way of life.", character: "Barney Stinson" },
   { quote: "I'm not ready to settle down. I want to stay in the game.", character: "Barney Stinson" },

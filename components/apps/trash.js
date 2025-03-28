@@ -1,40 +1,38 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
-export class Trash extends Component {
+export class LegendaryTrash extends Component {
     constructor() {
         super();
         this.trashItems = [
             {
-                name: "php",
-                icon: "./themes/filetypes/php.png"
+                name: "Ted's Cringe Texts",
+                icon: "./themes/Yaru/apps/gedit.png"
             },
             {
-                name: "Angular.js",
-                icon: "./themes/filetypes/js.png"
+                name: "Robin's Ex-Boyfriends List",
+                icon: "./themes/Yaru/apps/gedit.png"
             },
             {
-                name: "node_modules",
-                icon: "./themes/Yaru/system/folder.png"
-            },
-
-            {
-                name: "abandoned project",
-                icon: "./themes/Yaru/system/folder.png"
+                name: "Slap Bet Aftermath.mp4",
+                icon: "./themes/filetypes/video.png"
             },
             {
-                name: "18BCP127 assignment name.zip",
-                icon: "./themes/filetypes/zip.png"
-            },
-            {
-                name: "project final",
+                name: "Blitz's Bad Luck Folder",
                 icon: "./themes/Yaru/system/folder.png"
             },
             {
-                name: "project ultra-final",
-                icon: "./themes/Yaru/system/folder.png"
+                name: "Barney's Playbook (Deleted Scenes)",
+                icon: "./themes/Yaru/apps/todoist.png"
             },
-
+            {
+                name: "Marshall’s Embarrassing Karaoke Video",
+                icon: "./themes/filetypes/video.png"
+            },
+            {
+                name: "Ted's Butterfly TrampStamp",
+                icon: "./themes/filetypes/image.png"
+            },
         ];
         this.state = {
             empty: false,
@@ -42,21 +40,17 @@ export class Trash extends Component {
     }
 
     componentDidMount() {
-        // get user preference from local-storage
         let wasEmpty = localStorage.getItem("trash-empty");
-        if (wasEmpty !== null && wasEmpty !== undefined) {
-            if (wasEmpty === "true") this.setState({ empty: true });
-        }
+        if (wasEmpty === "true") this.setState({ empty: true });
     }
 
     focusFile = (e) => {
-        // icon
         $(e.target).children().get(0).classList.toggle("opacity-60");
-        // file name
         $(e.target).children().get(1).classList.toggle("bg-ub-orange");
     }
 
     emptyTrash = () => {
+        alert("Are you sure? This is history, bro!");
         this.setState({ empty: true });
         localStorage.setItem("trash-empty", true);
     };
@@ -64,8 +58,8 @@ export class Trash extends Component {
     emptyScreen = () => {
         return (
             <div className="flex-grow flex flex-col justify-center items-center">
-                <img className=" w-24" src="./themes/Yaru/status/user-trash-symbolic.svg" alt="Ubuntu Trash" />
-                <span className="font-bold mt-4 text-xl px-1 text-gray-400">Trash is Empty</span>
+                <img className="w-24" src="./themes/Yaru/status/user-trash-symbolic.svg" alt="Barney's Legendary Trash" />
+                <span className="font-bold mt-4 text-xl px-1 text-gray-400">This trash is now legen... wait for it... dary! And empty.</span>
             </div>
         );
     }
@@ -78,7 +72,7 @@ export class Trash extends Component {
                         return (
                             <div key={index} tabIndex="1" onFocus={this.focusFile} onBlur={this.focusFile} className="flex flex-col items-center text-sm outline-none w-16 my-2 mx-4">
                                 <div className="w-16 h-16 flex items-center justify-center">
-                                    <img src={item.icon} alt="Ubuntu File Icons" />
+                                    <img src={item.icon} alt="Barney's Trash Icons" />
                                 </div>
                                 <span className="text-center rounded px-0.5">{item.name}</span>
                             </div>
@@ -93,10 +87,10 @@ export class Trash extends Component {
         return (
             <div className="w-full h-full flex flex-col bg-ub-cool-grey text-white select-none">
                 <div className="flex items-center justify-between w-full bg-ub-warm-grey bg-opacity-40 text-sm">
-                    <span className="font-bold ml-2">Trash</span>
+                    <span className="font-bold ml-2">Barney's Legendary Trash</span>
                     <div className="flex">
-                        <div className="border border-black bg-black bg-opacity-50 px-3 py-1 my-1 mx-1 rounded text-gray-300">Restore</div>
-                        <div onClick={this.emptyTrash} className="border border-black bg-black bg-opacity-50 px-3 py-1 my-1 mx-1 rounded hover:bg-opacity-80">Empty</div>
+                        <div className="border border-black bg-black bg-opacity-50 px-3 py-1 my-1 mx-1 rounded text-gray-300">Restore Awesomeness</div>
+                        <div onClick={this.emptyTrash} className="border border-black bg-black bg-opacity-50 px-3 py-1 my-1 mx-1 rounded hover:bg-opacity-80">Empty & Suit Up!</div>
                     </div>
                 </div>
                 {
@@ -110,8 +104,8 @@ export class Trash extends Component {
     }
 }
 
-export default Trash;
+export default LegendaryTrash;
 
-export const displayTrash = () => {
-    return <Trash> </Trash>;
+export const displayLegendaryTrash = () => {
+    return <LegendaryTrash />;
 }
