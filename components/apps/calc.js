@@ -12,7 +12,7 @@ export class Calculator extends Component {
         if (value === "C") {
             this.setState({ display: "" }); // Clear screen
         } else if (value === "=") {
-            this.setState({ display: "60065" }); // Always show 60065 when = is pressed
+            this.setState({ display: "80085" }); // Always show 60065 when = is pressed
         } else {
             this.setState((prevState) => ({
                 display: prevState.display + value,
@@ -35,9 +35,18 @@ export class Calculator extends Component {
                 </div>
 
                 <div className="flex flex-col items-center justify-center flex-grow p-4">
-                    <div className="bg-black text-white text-2xl p-4 w-64 text-right rounded h-12 flex items-center justify-end">
-                        {this.state.display || "0"}
-                    </div>
+                <div
+    className="bg-black text-green-400 text-4xl p-4 w-64 text-right rounded h-16 flex items-center justify-end font-bold tracking-widest"
+    style={{
+        fontFamily: "'Digital-7', 'Courier New', monospace",
+        fontSize: "40px", // Increase size
+        fontWeight: "bold", // Make it thicker
+        letterSpacing: "2px", // Space out the characters
+    }}
+>
+    {this.state.display || "0"}
+</div>
+
                     <div className="grid grid-cols-4 gap-2 mt-4">
                         {buttons.map((btn, index) => (
                             <button
